@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Add person </h1>
+<div mat-dialog-content> 
+
+  <mat-form-field>
+    <mat-label>fname</mat-label>
+    <input matInput type="text" [(ngModel)]="person.fname">
+    <button *ngIf="person.fname" matSuffix mat-icon-button aria-label="Clear" (click)="person.fname=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>lname</mat-label>
+    <input matInput type="text" [(ngModel)]="person.lname">
+    <button *ngIf="person.lname" matSuffix mat-icon-button aria-label="Clear" (click)="person.lname=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>city</mat-label>
+    <input matInput type="text" [(ngModel)]="person.city">
+    <button *ngIf="person.city" matSuffix mat-icon-button aria-label="Clear" (click)="person.city=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input matInput type="text" [(ngModel)]="person.email">
+    <button *ngIf="person.email" matSuffix mat-icon-button aria-label="Clear" (click)="person.email=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>tel</mat-label>
+    <input matInput type="text" [(ngModel)]="person.tel">
+    <button *ngIf="person.tel" matSuffix mat-icon-button aria-label="Clear" (click)="person.tel=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="person" cdkFocusInitial>Ok</button>
+</div>
